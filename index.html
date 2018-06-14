@@ -77,7 +77,7 @@
   <input id="submit" type="button" value="Geocode">
 	</div>
 <div id="map"></div>
-	<script>
+	 <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
@@ -91,7 +91,6 @@
       }
 
       function geocodeAddress(geocoder, resultsMap) {
-		  document.getElementById("address").value = tr[i].getElementsByTagName("td")[0];
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
@@ -105,7 +104,7 @@
           }
         });
       }
-    </script> 
+    </script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaje9sMnT3iLWai51BH-8QpP_RXJQwedE
 &callback=initMap">
